@@ -24,10 +24,13 @@ sudo ldconfig
 Other installation hints
 ------------------------
 
-Make sure /var/lib/4store/ exists (in a cluster it need only exist
-on backend nodes) and that the user or users who will create new KBs
-have permission to write to this directory.
+Make sure /var/lib/4store exists (in a cluster it need only
+exist on backend nodes) and that the user or users who will create new
+KBs have permission to write to this directory.
 
+This directory is the "store root." Its location can be changed at
+build time using the --with-store-root option to the configure script,
+or at run time using the FS_STORE_ROOT environment variable.
 
 For clusters (or to test cluster tools on a single machine)
 the frontend must have a file /etc/4s-cluster which lists all
